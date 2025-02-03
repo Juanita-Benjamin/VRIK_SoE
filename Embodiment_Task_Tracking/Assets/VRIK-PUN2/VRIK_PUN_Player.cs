@@ -164,7 +164,7 @@ namespace RootMotion.Demos
             rightHandIKProxy.rotation = ik.references.rightHand.rotation;
 
             // Assign proxies as IK targets for the remote instance
-            ik.solver.spine.headTarget = headIKProxy;
+            //ik.solver.spine.headTarget = headIKProxy;
             ik.solver.leftArm.target = leftHandIKProxy;
             ik.solver.rightArm.target = rightHandIKProxy;
 
