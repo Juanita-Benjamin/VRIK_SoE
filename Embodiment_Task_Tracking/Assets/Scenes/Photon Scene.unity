@@ -356,7 +356,8 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 795669594}
   sceneViewId: 2
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -498,6 +499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d93281397007fa14a8eedfe273505945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isHosting: 1
 --- !u!1 &1623518728
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,7 +745,7 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 3
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
   - {fileID: 1691145122}
@@ -889,7 +891,7 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 3
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
   - {fileID: 1827352760}
