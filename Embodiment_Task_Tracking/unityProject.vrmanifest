@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.embodiment_task_tracking.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\Juani\\VRIK_SoE\\Embodiment_Task_Tracking\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "Embodiment_Task_Tracking [Testing]"
+        }
+      }
+    }
+  ]
+}
