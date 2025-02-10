@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - PlayerAvatar
+  - Green Cube
+  - Green Cylinder
+  - Orange Cube
+  - Orange Cylinder
+  - Yellow Cube
+  - Yellow Cylinder
+  - Blue Cube
+  - Blue Cylinder
   layers:
   - Default
   - TransparentFX
