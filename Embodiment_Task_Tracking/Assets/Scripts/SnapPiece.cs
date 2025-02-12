@@ -23,11 +23,12 @@ public class SnapPiece : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(tag)) { 
+        if (other.CompareTag(tag)) {
 
             //set position
-            other.gameObject.transform.position = gameObject.transform.position;
-            other.gameObject.transform.rotation = gameObject.transform.rotation;
+            other.gameObject.transform.SetParent(gameObject.transform);
+            other.gameObject.transform.localPosition = gameObject.transform.localPosition;
+            other.gameObject.transform.localRotation = gameObject.transform.rotation;
 
             InitAudio(other);
 
