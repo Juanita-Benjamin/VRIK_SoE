@@ -6382,6 +6382,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2483171112402263010, guid: f54012181eacade4ea242c65f804720f, type: 3}
       insertIndex: 0
       addedObject: {fileID: 945972453}
+    - targetCorrespondingSourceObject: {fileID: 2483171112402263010, guid: f54012181eacade4ea242c65f804720f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1032529610}
     - targetCorrespondingSourceObject: {fileID: 2483171112402213428, guid: f54012181eacade4ea242c65f804720f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2098200655}
@@ -11403,13 +11406,382 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6442339640571472327, guid: eb6bc10f92728a546a3d8c144d0ef787, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 945972476}
   m_SourcePrefab: {fileID: 100100000, guid: eb6bc10f92728a546a3d8c144d0ef787, type: 3}
 --- !u!4 &945972453 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3817605947884828321, guid: eb6bc10f92728a546a3d8c144d0ef787, type: 3}
   m_PrefabInstance: {fileID: 945972452}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &945972454 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5853368343141817120, guid: eb6bc10f92728a546a3d8c144d0ef787, type: 3}
+  m_PrefabInstance: {fileID: 945972452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &945972455 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2413530998563704695, guid: eb6bc10f92728a546a3d8c144d0ef787, type: 3}
+  m_PrefabInstance: {fileID: 945972452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &945972456 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1058771097002273047, guid: eb6bc10f92728a546a3d8c144d0ef787, type: 3}
+  m_PrefabInstance: {fileID: 945972452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &945972457 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7049401827258888227, guid: eb6bc10f92728a546a3d8c144d0ef787, type: 3}
+  m_PrefabInstance: {fileID: 945972452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &945972458 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7347710556476194970, guid: eb6bc10f92728a546a3d8c144d0ef787, type: 3}
+  m_PrefabInstance: {fileID: 945972452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &945972459 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4466782864633229390, guid: eb6bc10f92728a546a3d8c144d0ef787, type: 3}
+  m_PrefabInstance: {fileID: 945972452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &945972460 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6575490107108777790, guid: eb6bc10f92728a546a3d8c144d0ef787, type: 3}
+  m_PrefabInstance: {fileID: 945972452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &945972461 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7606388188277981105, guid: eb6bc10f92728a546a3d8c144d0ef787, type: 3}
+  m_PrefabInstance: {fileID: 945972452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &945972462 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2494227819838822627, guid: eb6bc10f92728a546a3d8c144d0ef787, type: 3}
+  m_PrefabInstance: {fileID: 945972452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &945972463 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3796135998893025026, guid: eb6bc10f92728a546a3d8c144d0ef787, type: 3}
+  m_PrefabInstance: {fileID: 945972452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &945972464 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1235701047022314321, guid: eb6bc10f92728a546a3d8c144d0ef787, type: 3}
+  m_PrefabInstance: {fileID: 945972452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &945972465 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6698092073795100007, guid: eb6bc10f92728a546a3d8c144d0ef787, type: 3}
+  m_PrefabInstance: {fileID: 945972452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &945972466 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8362296397940282678, guid: eb6bc10f92728a546a3d8c144d0ef787, type: 3}
+  m_PrefabInstance: {fileID: 945972452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &945972467 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4776154206678009637, guid: eb6bc10f92728a546a3d8c144d0ef787, type: 3}
+  m_PrefabInstance: {fileID: 945972452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &945972468 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2853792523736699549, guid: eb6bc10f92728a546a3d8c144d0ef787, type: 3}
+  m_PrefabInstance: {fileID: 945972452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &945972469 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 372011279931233274, guid: eb6bc10f92728a546a3d8c144d0ef787, type: 3}
+  m_PrefabInstance: {fileID: 945972452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &945972470 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 813562241272511791, guid: eb6bc10f92728a546a3d8c144d0ef787, type: 3}
+  m_PrefabInstance: {fileID: 945972452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &945972471 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8568777009844315901, guid: eb6bc10f92728a546a3d8c144d0ef787, type: 3}
+  m_PrefabInstance: {fileID: 945972452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &945972472 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4150047613444537597, guid: eb6bc10f92728a546a3d8c144d0ef787, type: 3}
+  m_PrefabInstance: {fileID: 945972452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &945972473 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4136407814712997250, guid: eb6bc10f92728a546a3d8c144d0ef787, type: 3}
+  m_PrefabInstance: {fileID: 945972452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &945972474 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 24668466978050337, guid: eb6bc10f92728a546a3d8c144d0ef787, type: 3}
+  m_PrefabInstance: {fileID: 945972452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &945972475 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6442339640571472327, guid: eb6bc10f92728a546a3d8c144d0ef787, type: 3}
+  m_PrefabInstance: {fileID: 945972452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &945972476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945972475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfac4fa329d1f4f23814af71a247c14b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fixTransforms: 1
+  references:
+    root: {fileID: 945972453}
+    pelvis: {fileID: 945972474}
+    spine: {fileID: 945972473}
+    chest: {fileID: 945972472}
+    neck: {fileID: 945972471}
+    head: {fileID: 945972470}
+    leftShoulder: {fileID: 945972469}
+    leftUpperArm: {fileID: 945972468}
+    leftForearm: {fileID: 945972467}
+    leftHand: {fileID: 945972466}
+    rightShoulder: {fileID: 945972465}
+    rightUpperArm: {fileID: 945972464}
+    rightForearm: {fileID: 945972463}
+    rightHand: {fileID: 945972462}
+    leftThigh: {fileID: 945972461}
+    leftCalf: {fileID: 945972460}
+    leftFoot: {fileID: 945972459}
+    leftToes: {fileID: 945972458}
+    rightThigh: {fileID: 945972457}
+    rightCalf: {fileID: 945972456}
+    rightFoot: {fileID: 945972455}
+    rightToes: {fileID: 945972454}
+  solver:
+    executedInEditor: 0
+    IKPosition: {x: 0, y: 0, z: 0}
+    IKPositionWeight: 1
+    root: {fileID: 0}
+    LOD: 0
+    scale: 1
+    plantFeet: 1
+    spine:
+      bones: []
+      headTarget: {fileID: 0}
+      positionWeight: 1
+      rotationWeight: 1
+      headClampWeight: 0.6
+      minHeadHeight: 0.8
+      useAnimatedHeadHeightWeight: 0
+      useAnimatedHeadHeightRange: 0.1
+      animatedHeadHeightBlend: 0.3
+      pelvisTarget: {fileID: 0}
+      pelvisPositionWeight: 0
+      pelvisRotationWeight: 0
+      maintainPelvisPosition: 0.2
+      chestGoal: {fileID: 0}
+      chestGoalWeight: 0
+      chestClampWeight: 0.5
+      rotateChestByHands: 1
+      bodyPosStiffness: 0.55
+      bodyRotStiffness: 0.1
+      neckStiffness: 0.2
+      moveBodyBackWhenCrouching: 0.5
+      maxRootAngle: 25
+      rootHeadingOffset: 0
+    leftArm:
+      bones: []
+      target: {fileID: 0}
+      positionWeight: 1
+      rotationWeight: 1
+      shoulderRotationWeight: 1
+      shoulderRotationMode: 0
+      shoulderTwistWeight: 1
+      shoulderYawOffset: 45
+      shoulderPitchOffset: -30
+      bendGoal: {fileID: 0}
+      bendGoalWeight: 0
+      swivelOffset: 0
+      wristToPalmAxis: {x: 0, y: 1, z: 0}
+      palmToThumbAxis: {x: 0, y: 0, z: 1}
+      armLengthMlp: 1
+      stretchCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    rightArm:
+      bones: []
+      target: {fileID: 0}
+      positionWeight: 1
+      rotationWeight: 1
+      shoulderRotationWeight: 1
+      shoulderRotationMode: 0
+      shoulderTwistWeight: 1
+      shoulderYawOffset: 45
+      shoulderPitchOffset: -30
+      bendGoal: {fileID: 0}
+      bendGoalWeight: 0
+      swivelOffset: 0
+      wristToPalmAxis: {x: -0, y: -1, z: -0}
+      palmToThumbAxis: {x: -0, y: -0, z: -1}
+      armLengthMlp: 1
+      stretchCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    leftLeg:
+      bones: []
+      target: {fileID: 0}
+      positionWeight: 0
+      rotationWeight: 0
+      bendGoal: {fileID: 0}
+      bendGoalWeight: 0
+      swivelOffset: 0
+      bendToTargetWeight: 0.5
+      legLengthMlp: 1
+      stretchCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      useAnimatedBendNormal: 0
+    rightLeg:
+      bones: []
+      target: {fileID: 0}
+      positionWeight: 0
+      rotationWeight: 0
+      bendGoal: {fileID: 0}
+      bendGoalWeight: 0
+      swivelOffset: 0
+      bendToTargetWeight: 0.5
+      legLengthMlp: 1
+      stretchCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      useAnimatedBendNormal: 0
+    locomotion:
+      mode: 0
+      weight: 1
+      moveThreshold: 0.3
+      animationHeader: 0
+      minAnimationSpeed: 0.2
+      maxAnimationSpeed: 3
+      animationSmoothTime: 0.1
+      rootPositionHeader: 0
+      standOffset: {x: 0, y: 0}
+      rootLerpSpeedWhileMoving: 30
+      rootLerpSpeedWhileStopping: 10
+      rootLerpSpeedWhileTurning: 10
+      maxRootOffset: 0.5
+      rootRotationHeader: 0
+      maxRootAngleMoving: 10
+      maxRootAngleStanding: 90
+      stepLengthMlp: 1
+      footDistance: 0.3
+      stepThreshold: 0.4
+      angleThreshold: 60
+      comAngleMlp: 1
+      maxVelocity: 0.4
+      velocityFactor: 0.4
+      maxLegStretch: 1
+      rootSpeed: 20
+      stepSpeed: 3
+      stepHeight:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.5
+          value: 0.03
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      maxBodyYOffset: 0.05
+      heelHeight:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.5
+          value: 0.03
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      relaxLegTwistMinAngle: 20
+      relaxLegTwistSpeed: 400
+      stepInterpolation: 3
+      offset: {x: 0, y: 0, z: 0}
+      blockingEnabled: 0
+      blockingLayers:
+        serializedVersion: 2
+        m_Bits: 0
+      raycastRadius: 0.2
+      raycastHeight: 0.2
+      onLeftFootstep:
+        m_PersistentCalls:
+          m_Calls: []
+      onRightFootstep:
+        m_PersistentCalls:
+          m_Calls: []
 --- !u!1 &949920110
 GameObject:
   m_ObjectHideFlags: 0
@@ -12364,6 +12736,449 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2117334601}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1032529609
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 757206025}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3789832204889069304, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0f5b916dd89913745a31004963f67fd0, type: 2}
+    - target: {fileID: 329111104556720423, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+      propertyPath: m_Name
+      value: Black_Female
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146644877728536110, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1018535877919089043, guid: 7bb66fc1d5dbf2143b0b3dc774dac86b, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1032529633}
+  m_SourcePrefab: {fileID: 100100000, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+--- !u!4 &1032529610 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+  m_PrefabInstance: {fileID: 1032529609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1032529611 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3320871204225830235, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+  m_PrefabInstance: {fileID: 1032529609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1032529612 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5552320626004875320, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+  m_PrefabInstance: {fileID: 1032529609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1032529613 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -922660400983426191, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+  m_PrefabInstance: {fileID: 1032529609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1032529614 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3201871457926274521, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+  m_PrefabInstance: {fileID: 1032529609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1032529615 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3189240396657022112, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+  m_PrefabInstance: {fileID: 1032529609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1032529616 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7883801184330731900, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+  m_PrefabInstance: {fileID: 1032529609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1032529617 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4076491412495832237, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+  m_PrefabInstance: {fileID: 1032529609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1032529618 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4600904771864836337, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+  m_PrefabInstance: {fileID: 1032529609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1032529619 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -6985397334472033850, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+  m_PrefabInstance: {fileID: 1032529609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1032529620 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1741284806543200681, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+  m_PrefabInstance: {fileID: 1032529609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1032529621 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5022261872497059524, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+  m_PrefabInstance: {fileID: 1032529609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1032529622 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8251818738472251026, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+  m_PrefabInstance: {fileID: 1032529609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1032529623 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4680051530481693033, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+  m_PrefabInstance: {fileID: 1032529609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1032529624 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3867273364867540806, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+  m_PrefabInstance: {fileID: 1032529609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1032529625 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -899329923975825505, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+  m_PrefabInstance: {fileID: 1032529609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1032529626 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8901143972642706434, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+  m_PrefabInstance: {fileID: 1032529609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1032529627 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2075102503136690207, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+  m_PrefabInstance: {fileID: 1032529609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1032529628 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1016970521777934091, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+  m_PrefabInstance: {fileID: 1032529609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1032529629 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7855997722490198888, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+  m_PrefabInstance: {fileID: 1032529609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1032529630 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8850575630652813058, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+  m_PrefabInstance: {fileID: 1032529609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1032529631 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1250735202743148208, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+  m_PrefabInstance: {fileID: 1032529609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1032529632 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: eba9a1c298e56724cad92221cd32332c, type: 3}
+  m_PrefabInstance: {fileID: 1032529609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1032529633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032529632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfac4fa329d1f4f23814af71a247c14b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fixTransforms: 1
+  references:
+    root: {fileID: 1032529610}
+    pelvis: {fileID: 1032529611}
+    spine: {fileID: 1032529612}
+    chest: {fileID: 1032529613}
+    neck: {fileID: 1032529618}
+    head: {fileID: 1032529619}
+    leftShoulder: {fileID: 1032529620}
+    leftUpperArm: {fileID: 1032529621}
+    leftForearm: {fileID: 1032529622}
+    leftHand: {fileID: 1032529623}
+    rightShoulder: {fileID: 1032529614}
+    rightUpperArm: {fileID: 1032529615}
+    rightForearm: {fileID: 1032529616}
+    rightHand: {fileID: 1032529617}
+    leftThigh: {fileID: 1032529628}
+    leftCalf: {fileID: 1032529629}
+    leftFoot: {fileID: 1032529630}
+    leftToes: {fileID: 1032529631}
+    rightThigh: {fileID: 1032529624}
+    rightCalf: {fileID: 1032529625}
+    rightFoot: {fileID: 1032529626}
+    rightToes: {fileID: 1032529627}
+  solver:
+    executedInEditor: 0
+    IKPosition: {x: 0, y: 0, z: 0}
+    IKPositionWeight: 1
+    root: {fileID: 0}
+    LOD: 0
+    scale: 1
+    plantFeet: 1
+    spine:
+      bones: []
+      headTarget: {fileID: 0}
+      positionWeight: 1
+      rotationWeight: 1
+      headClampWeight: 0.6
+      minHeadHeight: 0.8
+      useAnimatedHeadHeightWeight: 0
+      useAnimatedHeadHeightRange: 0.1
+      animatedHeadHeightBlend: 0.3
+      pelvisTarget: {fileID: 0}
+      pelvisPositionWeight: 0
+      pelvisRotationWeight: 0
+      maintainPelvisPosition: 0.2
+      chestGoal: {fileID: 0}
+      chestGoalWeight: 0
+      chestClampWeight: 0.5
+      rotateChestByHands: 1
+      bodyPosStiffness: 0.55
+      bodyRotStiffness: 0.1
+      neckStiffness: 0.2
+      moveBodyBackWhenCrouching: 0.5
+      maxRootAngle: 25
+      rootHeadingOffset: 0
+    leftArm:
+      bones: []
+      target: {fileID: 0}
+      positionWeight: 1
+      rotationWeight: 1
+      shoulderRotationWeight: 1
+      shoulderRotationMode: 0
+      shoulderTwistWeight: 1
+      shoulderYawOffset: 45
+      shoulderPitchOffset: -30
+      bendGoal: {fileID: 0}
+      bendGoalWeight: 0
+      swivelOffset: 0
+      wristToPalmAxis: {x: 0, y: 1, z: 0}
+      palmToThumbAxis: {x: -0, y: -0, z: -1}
+      armLengthMlp: 1
+      stretchCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    rightArm:
+      bones: []
+      target: {fileID: 0}
+      positionWeight: 1
+      rotationWeight: 1
+      shoulderRotationWeight: 1
+      shoulderRotationMode: 0
+      shoulderTwistWeight: 1
+      shoulderYawOffset: 45
+      shoulderPitchOffset: -30
+      bendGoal: {fileID: 0}
+      bendGoalWeight: 0
+      swivelOffset: 0
+      wristToPalmAxis: {x: 0, y: 1, z: 0}
+      palmToThumbAxis: {x: -0, y: -0, z: -1}
+      armLengthMlp: 1
+      stretchCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+    leftLeg:
+      bones: []
+      target: {fileID: 0}
+      positionWeight: 0
+      rotationWeight: 0
+      bendGoal: {fileID: 0}
+      bendGoalWeight: 0
+      swivelOffset: 0
+      bendToTargetWeight: 0.5
+      legLengthMlp: 1
+      stretchCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      useAnimatedBendNormal: 0
+    rightLeg:
+      bones: []
+      target: {fileID: 0}
+      positionWeight: 0
+      rotationWeight: 0
+      bendGoal: {fileID: 0}
+      bendGoalWeight: 0
+      swivelOffset: 0
+      bendToTargetWeight: 0.5
+      legLengthMlp: 1
+      stretchCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      useAnimatedBendNormal: 0
+    locomotion:
+      mode: 0
+      weight: 1
+      moveThreshold: 0.3
+      animationHeader: 0
+      minAnimationSpeed: 0.2
+      maxAnimationSpeed: 3
+      animationSmoothTime: 0.1
+      rootPositionHeader: 0
+      standOffset: {x: 0, y: 0}
+      rootLerpSpeedWhileMoving: 30
+      rootLerpSpeedWhileStopping: 10
+      rootLerpSpeedWhileTurning: 10
+      maxRootOffset: 0.5
+      rootRotationHeader: 0
+      maxRootAngleMoving: 10
+      maxRootAngleStanding: 90
+      stepLengthMlp: 1
+      footDistance: 0.3
+      stepThreshold: 0.4
+      angleThreshold: 60
+      comAngleMlp: 1
+      maxVelocity: 0.4
+      velocityFactor: 0.4
+      maxLegStretch: 1
+      rootSpeed: 20
+      stepSpeed: 3
+      stepHeight:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.5
+          value: 0.03
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      maxBodyYOffset: 0.05
+      heelHeight:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.5
+          value: 0.03
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      relaxLegTwistMinAngle: 20
+      relaxLegTwistSpeed: 400
+      stepInterpolation: 3
+      offset: {x: 0, y: 0, z: 0}
+      blockingEnabled: 0
+      blockingLayers:
+        serializedVersion: 2
+        m_Bits: 0
+      raycastRadius: 0.2
+      raycastHeight: 0.2
+      onLeftFootstep:
+        m_PersistentCalls:
+          m_Calls: []
+      onRightFootstep:
+        m_PersistentCalls:
+          m_Calls: []
 --- !u!1 &1037661255
 GameObject:
   m_ObjectHideFlags: 0
