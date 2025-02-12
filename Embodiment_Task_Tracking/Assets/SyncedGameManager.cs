@@ -8,6 +8,7 @@ using Photon.Pun;
 public class SyncedGameManager : MonoBehaviourPunCallbacks
 {
     [SerializeField] bool isHosting = true;
+    int count = 0;
 
     void Awake()
     {
@@ -25,7 +26,7 @@ public class SyncedGameManager : MonoBehaviourPunCallbacks
 
         if (PhotonNetwork.IsConnected)
         {
-            
+            Debug.Log("Connected");
         }
         else
         {
@@ -65,6 +66,9 @@ public class SyncedGameManager : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         Debug.Log("JOINED ROOM");
+        Debug.Assert(PhotonNetwork.IsConnected);
+        Debug.Log("I have joined" + count);
+        count++;
     }
 
     public override void OnJoinRoomFailed(short returnCode, string message)
