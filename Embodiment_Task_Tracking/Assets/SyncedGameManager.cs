@@ -11,7 +11,7 @@ public class SyncedGameManager : MonoBehaviourPunCallbacks
 
     void Awake()
     {
-        PhotonNetwork.AutomaticallySyncScene = false;
+        PhotonNetwork.AutomaticallySyncScene = true;
     }
 
     void Start()
