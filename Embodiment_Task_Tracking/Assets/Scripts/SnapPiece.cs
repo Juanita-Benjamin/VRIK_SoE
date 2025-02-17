@@ -1,3 +1,4 @@
+using Oculus.Interaction;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,30 +6,37 @@ using UnityEngine;
 public class SnapPiece : MonoBehaviour
 {
     public string tag;
-    Collider collider;
-    AudioSource source;
+    private Collider collider;
+    private AudioSource source;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         collider = GetComponent<Collider>();
         collider.isTrigger = true;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
     }
+
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.transform == objectAttach)
+    //    {
+    //        AttachObject();
+    //        InitAudio(other);
+
+    //    }
+    //}
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(tag)) {
 
-            //set position
-            other.gameObject.transform.SetParent(gameObject.transform);
-            other.gameObject.transform.localPosition = gameObject.transform.localPosition;
-            other.gameObject.transform.localRotation = gameObject.transform.rotation;
+        if (other.CompareTag(tag))
+        {
+            
 
             InitAudio(other);
 
@@ -41,9 +49,7 @@ public class SnapPiece : MonoBehaviour
 
             body.constraints = RigidbodyConstraints.FreezeAll;
             body.isKinematic = true;
-
         }
-
     }
 
     private void InitAudio(Collider other)
@@ -53,5 +59,4 @@ public class SnapPiece : MonoBehaviour
         source.pitch = 0.9f;
         source.spatialBlend = 1f;
     }
-
 }
