@@ -714,6 +714,14 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114174132202800580, guid: 1f16155c4b6ab5040937c26989376813, type: 3}
+      propertyPath: ObservedComponents.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114174132202800580, guid: 1f16155c4b6ab5040937c26989376813, type: 3}
+      propertyPath: ObservedComponents.Array.data[1]
+      value: 
+      objectReference: {fileID: 1533743900}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -746,6 +754,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4884864901016670, guid: 1f16155c4b6ab5040937c26989376813, type: 3}
   m_PrefabInstance: {fileID: 1533743896}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1533743900 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114799534121397838, guid: 1f16155c4b6ab5040937c26989376813, type: 3}
+  m_PrefabInstance: {fileID: 1533743896}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bfd6896ef7ca80468eb77b3c8d4e705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1619694871
 GameObject:
   m_ObjectHideFlags: 0
