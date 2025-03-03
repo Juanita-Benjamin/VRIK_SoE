@@ -9,6 +9,7 @@ public class SyncedGameManager : MonoBehaviourPunCallbacks
 {
     [SerializeField] bool isHosting = true;
     int count = 0;
+  
 
     void Awake()
     {
@@ -62,6 +63,7 @@ public class SyncedGameManager : MonoBehaviourPunCallbacks
     {
         Debug.LogWarning($"Disconnected due to {cause}");
     }
+
 
     public override void OnJoinedRoom()
     {
