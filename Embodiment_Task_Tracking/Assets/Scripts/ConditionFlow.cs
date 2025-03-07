@@ -24,7 +24,7 @@ public class ConditionFlow : MonoBehaviour
     public List<GameObject> avatars;
 
     //list of elements
-    public GameObject tableTask, floorTask;
+    public GameObject tableTask, floorTask, lowerBody;
 
     //Pause and end scree
     public GameObject pauseScreen, endScreen;
@@ -42,7 +42,7 @@ public class ConditionFlow : MonoBehaviour
     private string log_path = "Participant_Log_Data.csv";
 
     //cohort track
-    [SerializeField] private int cohortCount = 1; //cohort count: 8
+    [SerializeField] private int cohortCount = 0; //cohort count: 8
     [SerializeField] private int trialCount = 0; //trial within the cohort: 8
 
     [SerializeField]private string[,] conditions = new string[8, 8]
@@ -74,27 +74,41 @@ public class ConditionFlow : MonoBehaviour
             {"Hispanic_Female", avatars[6] },
             {"Hispanic_Male", avatars[7] }
         };
-
-       
-
-        //get the lower half of the avatar
-        for (int i = 0; i < avatars.Count; i++)
-        {
-            //if (avatars[i].activeSelf)
-            //{
-            //    //find the lower body of the avatar
-            //    lowerBody = GameObject.Find("Lower Body");
-            //}
-        }
     }
 
     // Update is called once per frame
     private void Update()
     {
-
+       
     }
 
-   
+    public void InstantiateAvatar()
+    {
+
+        string selectedRace = race_dropdown.options[race_dropdown.value].text;
+        string selectedGender = gender_dropdown.options[gender_dropdown.value].text;
+
+        string key = $"{selectedRace}_{selectedGender}";
+
+        if (avatarPrefabs.ContainsKey(key))
+        {
+            Debug.Log("Key found");
+            avatarPrefabs[key].SetActive(true);
+        }
+        else
+        {
+            Debug.Log("Key not found");
+        }
+
+        foreach (var avatar in avatars)
+        {
+            if (avatar.activeSelf)
+            {
+                Debug.Log(avatar.name);
+                lowerBody = GameObject.Find($"{avatar.name}/Lower Body"); 
+            }
+        }
+    }
     public void NextTrial()
     {
         //update the trial count and then
@@ -142,28 +156,21 @@ public class ConditionFlow : MonoBehaviour
         if (currentCondition.Contains("FullBody"))
         {
             isFullbody = true;
-        }
-
-        if (currentCondition.Contains("Table Task")) tableTask.SetActive(true);
-        if (currentCondition.Contains("Floor Task")) floorTask.SetActive(true);
-    }
-    public void InstantiateAvatar()
-    {
-        string selectedRace = race_dropdown.options[race_dropdown.value].text;
-        string selectedGender = gender_dropdown.options[gender_dropdown.value].text;
-
-        string key = $"{selectedRace}_{selectedGender}";
-
-        if (avatarPrefabs.ContainsKey(key))
-        {
-            Debug.Log("Key found");
-            avatarPrefabs[key].SetActive(true);
+            lowerBody.gameObject.SetActive(true);
         }
         else
         {
-            Debug.Log("Key not found");
+            lowerBody.gameObject.SetActive(false);
         }
+
+        if (currentCondition.Contains("Table Task"))
+        {
+            tableTask.SetActive(true);
+            isTableTask = true;
+        }
+        if (currentCondition.Contains("Floor Task")) { floorTask.SetActive(true); isFloorTask = true; }
     }
+
 
     public void ParticipantData()
     {

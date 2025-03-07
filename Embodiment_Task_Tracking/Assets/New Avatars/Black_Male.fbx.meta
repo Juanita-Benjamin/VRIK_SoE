@@ -8,12 +8,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: _Body
-    second: {fileID: 2100000, guid: e32394c35d6e81f4d8efa766ca766e0e, type: 2}
+    second: {fileID: 2100000, guid: b550ad7b92456d8468d8e30927547ce5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: _Eye_trans
-    second: {fileID: 2100000, guid: 0f5b916dd89913745a31004963f67fd0, type: 2}
+    second: {fileID: 2100000, guid: b550ad7b92456d8468d8e30927547ce5, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

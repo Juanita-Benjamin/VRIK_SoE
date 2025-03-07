@@ -1,6 +1,8 @@
 using Oculus.Interaction;
+using Oculus.Interaction.HandGrab;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Schema;
 using UnityEngine;
 
 public class SnapPiece : MonoBehaviour
@@ -8,6 +10,7 @@ public class SnapPiece : MonoBehaviour
     public string tag;
     private Collider collider;
     private AudioSource source;
+  
 
     // Start is called before the first frame update
     private void Start()
@@ -44,11 +47,18 @@ public class SnapPiece : MonoBehaviour
 
             //then stop the physics?
             Rigidbody body = other.gameObject.GetComponent<Rigidbody>();
-            body.velocity = Vector3.zero;
-            body.angularVelocity = Vector3.zero;
+           
 
             body.constraints = RigidbodyConstraints.FreezeAll;
             body.isKinematic = true;
+
+            other.GetComponent<HandGrabInteractable>().enabled = false;
+            other.GetComponent<GrabInteractable>().enabled = false;
+
+            //other.gameObject.tag = "Untagged";
+
+            //should I delete the main object
+            //Destroy(gameObject); //destroy the ghost sphere
         }
     }
 
