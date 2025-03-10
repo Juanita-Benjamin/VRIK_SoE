@@ -54,8 +54,8 @@ public class SnapPiece : MonoBehaviour
 
             other.GetComponent<HandGrabInteractable>().enabled = false;
             other.GetComponent<GrabInteractable>().enabled = false;
-
-            //other.gameObject.tag = "Untagged";
+            other.GetComponent<Grabbable>().enabled = false;
+            other.gameObject.tag = "Untagged";
 
             //should I delete the main object
             //Destroy(gameObject); //destroy the ghost sphere

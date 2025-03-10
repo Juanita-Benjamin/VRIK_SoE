@@ -122,6 +122,7 @@ public class ConditionFlow : MonoBehaviour
             floorTask.SetActive(false);
         }
         updateCondition();
+        ParticipantData();
     }
     public void StartConditions()
     {
