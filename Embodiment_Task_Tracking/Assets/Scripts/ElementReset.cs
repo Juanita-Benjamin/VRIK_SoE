@@ -11,14 +11,18 @@ public class ElementReset : MonoBehaviour
     [SerializeField] private List<Vector3> elementPositions;
     [SerializeField] private List<GameObject> floorElements;
     [SerializeField] private List<Vector3> floorElementPositions;
-    
+    public GameObject breakScreen;
+
     public TextMeshProUGUI totalText, currentText;
-    //[SerializeField] private 
+
+    //[SerializeField] private
     public int total = 0;
+
     public int current = 0;
-    [SerializeField] bool onFlag = false;
+    [SerializeField] private bool onFlag = false;
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         total = GetScriptAmount(snapObjects);
         totalText.text = total.ToString();
@@ -26,37 +30,43 @@ public class ElementReset : MonoBehaviour
         for (int i = 0; i < elements.Count; i++)
         {
             elementPositions[i] = elements[i].transform.position;
-            //elementPositions[i].transform.rotation = elements[i].transform.rotation;
             floorElementPositions[i] = floorElements[i].transform.position;
-            //floorElementPositions[i].transform.rotation = floorElements[i].transform.rotation;
-
         }
-
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (onFlag == false)
-        {
-            current = total - GetScriptAmount(snapObjects);
-            currentText.text = current.ToString();
+        current = total - GetScriptAmount(snapObjects);
+        currentText.text = current.ToString();
 
-            //ToDo:
-            //call ResetElements when all the elements have been put together
+        if (current == total)
+        {
+            //set the break screen active and call reset
+            breakScreen.SetActive(true);
+            ResetElements();
+            current = 0; //set current to 0 again
+            total = GetScriptAmount(snapObjects); //reassign when you reset
+
+            if (current == 0)
+            {
+                breakScreen.SetActive(false); //turn off the break screen
+            }
+
         }
     }
+
     //Finish this
     public void ResetElements()
     {
-        for (int i = 0; i <  elements.Count; i++)
+        for (int i = 0; i < elements.Count; i++)
         {
             elements[i].transform.position = elementPositions[i];
-            //elements[i].transform.rotation = elementPositions[i].transform.rotation;
+
             floorElements[i].transform.position = floorElementPositions[i];
-            //floorElements[i].transform.rotation = floorElementPositions[i].transform.rotation;
         }
     }
+
     private static int GetScriptAmount(SnapPiece[] snapInteractors)
     {
         int count = 0;

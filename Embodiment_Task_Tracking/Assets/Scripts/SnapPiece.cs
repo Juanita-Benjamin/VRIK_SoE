@@ -16,14 +16,15 @@ public class SnapPiece : MonoBehaviour
     private void Start()
     {
         collider = GetComponent<Collider>();
-        collider.isTrigger = true;
+        //collider.isTrigger = true;
+
     }
 
     // Update is called once per frame
     private void Update()
     {
     }
-
+    //OLD
     //private void OnTriggerEnter(Collider other)
     //{
     //    if (other.transform == objectAttach)
@@ -39,26 +40,20 @@ public class SnapPiece : MonoBehaviour
 
         if (other.CompareTag(tag))
         {
+           
+            //Setting the parent will change the scale: DO NOT DO!
+            //other.gameObject.transform.SetParent(gameObject.transform);
             
-
-            InitAudio(other);
-
-            source.Play();
-
             //then stop the physics?
             Rigidbody body = other.gameObject.GetComponent<Rigidbody>();
-           
+            Rigidbody parent = gameObject.GetComponent<Rigidbody>();
 
             body.constraints = RigidbodyConstraints.FreezeAll;
+            body.useGravity = false;
             body.isKinematic = true;
 
-            other.GetComponent<HandGrabInteractable>().enabled = false;
-            other.GetComponent<GrabInteractable>().enabled = false;
-            other.GetComponent<Grabbable>().enabled = false;
-            other.gameObject.tag = "Untagged";
 
-            //should I delete the main object
-            //Destroy(gameObject); //destroy the ghost sphere
+            other.gameObject.tag = "Untagged";
         }
     }
 

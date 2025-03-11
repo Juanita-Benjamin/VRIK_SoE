@@ -143,7 +143,8 @@ public class ConditionFlow : MonoBehaviour
         string currentCondition = conditions[cohortCount, trialIndex];
 
         Debug.Log($"Cohort {(cohortCount + 1)}, Trial {trialCount + 1}: {currentCondition}");
-
+        
+        //this should reset stuff
         isHandstracking = false;
         isFullbody = false;
         tableTask.SetActive(false);
@@ -168,8 +169,13 @@ public class ConditionFlow : MonoBehaviour
         {
             tableTask.SetActive(true);
             isTableTask = true;
+            isFloorTask = false;
         }
-        if (currentCondition.Contains("Floor Task")) { floorTask.SetActive(true); isFloorTask = true; }
+        if (currentCondition.Contains("Floor Task")) 
+        { floorTask.SetActive(true); 
+            isFloorTask = true;
+            isTableTask = false;
+        }
     }
 
 
