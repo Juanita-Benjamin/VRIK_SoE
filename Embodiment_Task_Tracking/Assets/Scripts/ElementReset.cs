@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Oculus.Movement.BodyTrackingForFitness;
 
 public class ElementReset : MonoBehaviour
 {
@@ -19,11 +20,14 @@ public class ElementReset : MonoBehaviour
     public int total = 0;
 
     public int current = 0;
+
+    private SnapPiece snapNumber;
     [SerializeField] private bool onFlag = false;
 
     // Start is called before the first frame update
     private void Start()
     {
+      
         total = GetScriptAmount(snapObjects);
         totalText.text = total.ToString();
 
@@ -37,22 +41,16 @@ public class ElementReset : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        current = total - GetScriptAmount(snapObjects);
+        
+        //current = total - GetScriptAmount(snapObjects);
         currentText.text = current.ToString();
 
         if (current == total)
         {
             //set the break screen active and call reset
             breakScreen.SetActive(true);
-            ResetElements();
             current = 0; //set current to 0 again
-            total = GetScriptAmount(snapObjects); //reassign when you reset
-
-            if (current == 0)
-            {
-                breakScreen.SetActive(false); //turn off the break screen
-            }
-
+           
         }
     }
 
@@ -65,6 +63,9 @@ public class ElementReset : MonoBehaviour
 
             floorElements[i].transform.position = floorElementPositions[i];
         }
+
+        current = 0;
+        breakScreen.SetActive(false);
     }
 
     private static int GetScriptAmount(SnapPiece[] snapInteractors)
@@ -77,5 +78,10 @@ public class ElementReset : MonoBehaviour
         }
 
         return count;
+    }
+
+    public void IncrementCounter()
+    {
+        current++;
     }
 }

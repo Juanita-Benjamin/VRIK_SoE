@@ -4374,7 +4374,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &148828629
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4986,6 +4986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tag: Yellow Cylinder
+  counter: 0
 --- !u!1 &158468054
 GameObject:
   m_ObjectHideFlags: 0
@@ -9362,6 +9363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tag: Blue Cylinder
+  counter: 0
 --- !u!1 &348053902
 GameObject:
   m_ObjectHideFlags: 0
@@ -10016,6 +10018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tag: Green Cylinder
+  counter: 0
 --- !u!135 &373157481
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10299,6 +10302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tag: Yellow Cylinder
+  counter: 0
 --- !u!135 &391275941
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10519,6 +10523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tag: Yellow Cylinder
+  counter: 0
 --- !u!1 &406634509
 GameObject:
   m_ObjectHideFlags: 0
@@ -12090,7 +12095,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &469329059
 Transform:
   m_ObjectHideFlags: 0
@@ -12447,6 +12452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tag: Yellow Cylinder
+  counter: 0
 --- !u!135 &478670995
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12698,6 +12704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tag: Green Cylinder
+  counter: 0
 --- !u!1 &480418106
 GameObject:
   m_ObjectHideFlags: 0
@@ -14244,7 +14251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2514675399181695721, guid: f54012181eacade4ea242c65f804720f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.26
       objectReference: {fileID: 0}
     - target: {fileID: 2514675399181695721, guid: f54012181eacade4ea242c65f804720f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14943,6 +14950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tag: Blue Cylinder
+  counter: 0
 --- !u!135 &558548878
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -18379,6 +18387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tag: Yellow Cylinder
+  counter: 0
 --- !u!135 &722797073
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -19554,6 +19563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tag: Yellow Cylinder
+  counter: 0
 --- !u!135 &755194937
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -24484,6 +24494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tag: Orange Cylinder
+  counter: 0
 --- !u!135 &975958278
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -24704,6 +24715,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tag: Green Cylinder
+  counter: 0
 --- !u!1 &979932995
 GameObject:
   m_ObjectHideFlags: 0
@@ -27811,6 +27823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tag: Blue Cylinder
+  counter: 0
 --- !u!135 &1157013333
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -29297,7 +29310,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1220480461}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3.72}
+  m_LocalPosition: {x: 0, y: 0, z: 12.63}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -29307,7 +29320,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -89.483, y: -11.492}
+  m_AnchoredPosition: {x: -89.483, y: -11.81}
   m_SizeDelta: {x: 51.503, y: 19.478}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1220480463
@@ -31065,6 +31078,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tag: Orange Cylinder
+  counter: 0
 --- !u!1 &1305976446
 GameObject:
   m_ObjectHideFlags: 0
@@ -35076,6 +35090,7 @@ MonoBehaviour:
   lowerBody: {fileID: 0}
   pauseScreen: {fileID: 1220480461}
   endScreen: {fileID: 1220480461}
+  reset: {fileID: 1519634644}
   PID: {fileID: 135566388}
   cohort_dropdown: {fileID: 873302992}
   gender_dropdown: {fileID: 483375601}
@@ -35186,6 +35201,7 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
+  breakScreen: {fileID: 1220480461}
   totalText: {fileID: 61475708}
   currentText: {fileID: 996732634}
   total: 0
@@ -36498,6 +36514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tag: Blue Cylinder
+  counter: 0
 --- !u!1001 &1574461413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41551,6 +41568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tag: Green Cylinder
+  counter: 0
 --- !u!135 &1822569754
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -41771,6 +41789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tag: Yellow Cylinder
+  counter: 0
 --- !u!1 &1828282081
 GameObject:
   m_ObjectHideFlags: 0
@@ -42582,6 +42601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tag: Orange Cylinder
+  counter: 0
 --- !u!1 &1868704338
 GameObject:
   m_ObjectHideFlags: 0
@@ -43390,7 +43410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3a1cf3ccfac384042a00327607d8ecbd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1016970521777934091, guid: 3a1cf3ccfac384042a00327607d8ecbd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -45085,6 +45105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tag: Orange Cylinder
+  counter: 0
 --- !u!135 &1923419123
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -46293,7 +46314,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1990501764
 Transform:
   m_ObjectHideFlags: 0
@@ -47326,6 +47347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tag: Yellow Cylinder
+  counter: 0
 --- !u!1 &2042114896
 GameObject:
   m_ObjectHideFlags: 0

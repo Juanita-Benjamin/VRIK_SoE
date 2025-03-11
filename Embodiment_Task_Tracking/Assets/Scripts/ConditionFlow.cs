@@ -32,6 +32,8 @@ public class ConditionFlow : MonoBehaviour
     [Header("Avatar Prefabs")]
     [SerializeField] private Dictionary<string, GameObject> avatarPrefabs;
 
+    public ElementReset reset;
+
     //UI Components
     public TMP_InputField PID;
 
@@ -47,14 +49,14 @@ public class ConditionFlow : MonoBehaviour
 
     [SerializeField]private string[,] conditions = new string[8, 8]
     {
-        {"HT + FullBody + Table Task", "HT + FullBody + Floor Task", "HT + Torso + Table task", "Controller + FullBody + Floor Task",  "HT + Torso +  Floor Task", "Controller + FullBody + Table Task","Controller + Torso + Floor Task", "Controller + Torso + Table Task"},
-        {"HT + FullBody + Floor Task", "Controller + FullBody + Floor Task",  "HT + FullBody + Table Task",  "Controller + FullBody + Table Task",  "HT + Torso + Table task"," Controller + Torso + Table Task", "HT + Torso +  Floor Task", "Controller + Torso + Floor Task"},
-        {"Controller + FullBody + Floor Task", "Controller + FullBody + Table Task","HT + FullBody + Floor Task","Controller + Torso + Table Task", "HT + FullBody + Table Task", "Controller + Torso + Floor Task","HT + Torso + Table task","HT + Torso +  Floor Task"},
-        {"Controller + FullBody + Table Task","Controller + Torso + Table Task", "Controller + FullBody + Floor Task",  "Controller + Torso + Floor Task", "HT + FullBody + Floor Task",  "HT + Torso +  Floor Task", "HT + FullBody + Table Task", "HT + Torso + Table task" },
-        {"Controller + Torso + Table Task",  "Controller + Torso + Floor Task", "Controller + FullBody + Table Task",  "HT + Torso +  Floor Task", "Controller + FullBody + Floor Task",  "HT + Torso + Table task", "HT + FullBody + Floor Task", " HT + FullBody + Table Task"},
-        {"Controller + Torso + Floor Task", "HT + Torso +  Floor Task",    "Controller + Torso + Table Task", "HT + Torso + Table task"," Controller + FullBody + Table Task",  "HT + FullBody + Table Task", " Controller + FullBody + Floor Task",  "HT + FullBody + Floor Task"},
-        {"HT + Torso +  Floor Task", " HT + Torso + Table task", "Controller + Torso + Floor Task"," HT + FullBody + Table Task",  "Controller + Torso + Table Task", "HT + FullBody + Floor Task", " Controller + FullBody + Table Task",  "Controller + FullBody + Floor Task"},
-        {"HT + Torso + Table task", "HT + FullBody + Table Task",  "HT + Torso +  Floor Task", "HT + FullBody + Floor Task",  "Controller + Torso + Floor Task", "Controller + FullBody + Floor Task",  "Controller + Torso + Table Task", "Controller + FullBody + Table Task"}
+        {"HT + FullBody + Table Task", "HT + FullBody + Floor Task", "HT + Torso + Table Task", "Controller + FullBody + Floor Task",  "HT + Torso +  Floor Task", "Controller + FullBody + Table Task","Controller + Torso + Floor Task", "Controller + Torso + Table Task"},
+        {"HT + FullBody + Floor Task", "Controller + FullBody + Floor Task",  "HT + FullBody + Table Task",  "Controller + FullBody + Table Task",  "HT + Torso + Table Task"," Controller + Torso + Table Task", "HT + Torso +  Floor Task", "Controller + Torso + Floor Task"},
+        {"Controller + FullBody + Floor Task", "Controller + FullBody + Table Task","HT + FullBody + Floor Task","Controller + Torso + Table Task", "HT + FullBody + Table Task", "Controller + Torso + Floor Task","HT + Torso + Table Task","HT + Torso +  Floor Task"},
+        {"Controller + FullBody + Table Task","Controller + Torso + Table Task", "Controller + FullBody + Floor Task",  "Controller + Torso + Floor Task", "HT + FullBody + Floor Task",  "HT + Torso +  Floor Task", "HT + FullBody + Table Task", "HT + Torso + Table Task" },
+        {"Controller + Torso + Table Task",  "Controller + Torso + Floor Task", "Controller + FullBody + Table Task",  "HT + Torso +  Floor Task", "Controller + FullBody + Floor Task",  "HT + Torso + Table Task", "HT + FullBody + Floor Task", " HT + FullBody + Table Task"},
+        {"Controller + Torso + Floor Task", "HT + Torso +  Floor Task",    "Controller + Torso + Table Task", "HT + Torso + Table Task"," Controller + FullBody + Table Task",  "HT + FullBody + Table Task", " Controller + FullBody + Floor Task",  "HT + FullBody + Floor Task"},
+        {"HT + Torso +  Floor Task", " HT + Torso + Table Task", "Controller + Torso + Floor Task"," HT + FullBody + Table Task",  "Controller + Torso + Table Task", "HT + FullBody + Floor Task", " Controller + FullBody + Table Task",  "Controller + FullBody + Floor Task"},
+        {"HT + Torso + Table Task", "HT + FullBody + Table Task",  "HT + Torso +  Floor Task", "HT + FullBody + Floor Task",  "Controller + Torso + Floor Task", "Controller + FullBody + Floor Task",  "Controller + Torso + Table Task", "Controller + FullBody + Table Task"}
     };
 
     // Start is called before the first frame update
@@ -123,6 +125,8 @@ public class ConditionFlow : MonoBehaviour
         }
         updateCondition();
         ParticipantData();
+       
+        reset.ResetElements();
     }
     public void StartConditions()
     {
@@ -143,7 +147,7 @@ public class ConditionFlow : MonoBehaviour
         string currentCondition = conditions[cohortCount, trialIndex];
 
         Debug.Log($"Cohort {(cohortCount + 1)}, Trial {trialCount + 1}: {currentCondition}");
-        
+
         //this should reset stuff
         isHandstracking = false;
         isFullbody = false;
@@ -168,14 +172,19 @@ public class ConditionFlow : MonoBehaviour
         if (currentCondition.Contains("Table Task"))
         {
             tableTask.SetActive(true);
+            
             isTableTask = true;
             isFloorTask = false;
         }
-        if (currentCondition.Contains("Floor Task")) 
-        { floorTask.SetActive(true); 
+       
+        if (currentCondition.Contains("Floor Task"))
+        {
+            floorTask.SetActive(true);
+          
             isFloorTask = true;
             isTableTask = false;
         }
+        
     }
 
 

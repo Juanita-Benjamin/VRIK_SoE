@@ -10,13 +10,14 @@ public class SnapPiece : MonoBehaviour
     public string tag;
     private Collider collider;
     private AudioSource source;
-  
+    public int counter = 0;
+    private bool isSnapped = false;
 
     // Start is called before the first frame update
     private void Start()
     {
         collider = GetComponent<Collider>();
-        //collider.isTrigger = true;
+      
 
     }
 
@@ -24,16 +25,7 @@ public class SnapPiece : MonoBehaviour
     private void Update()
     {
     }
-    //OLD
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.transform == objectAttach)
-    //    {
-    //        AttachObject();
-    //        InitAudio(other);
-
-    //    }
-    //}
+  
 
     private void OnTriggerEnter(Collider other)
     {
@@ -54,6 +46,14 @@ public class SnapPiece : MonoBehaviour
 
 
             other.gameObject.tag = "Untagged";
+            counter++;
+
+            ElementReset resetScript = FindObjectOfType<ElementReset>();
+            if (resetScript != null)
+            {
+                resetScript.IncrementCounter();
+                
+            }
         }
     }
 
