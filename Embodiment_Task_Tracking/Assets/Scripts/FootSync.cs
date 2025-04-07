@@ -20,8 +20,8 @@ public class FootSync : MonoBehaviourPun
     private Vector3 rightFootOffset;
     private Vector3 headOffset;
 
-    private float lastSentTime = 0;
-    private float sendEverySeconds = 1;
+    //private float lastSentTime = 0;
+    //private float sendEverySeconds = 1;
 
     private PhotonView photonView;
 
@@ -58,9 +58,10 @@ public class FootSync : MonoBehaviourPun
 
         //if (Input.GetKeyUp(KeyCode.Space))
         //{
-        //    print("SENDING.");
-        //    photonView.RPC("CalibrateHMD", RpcTarget.Others, headCube.transform.position, headCube.transform.rotation);
-        //    //CalibrateHMD(headCube.transform.position);
+            //CalibrateLocally();
+            //print("SENDING.");
+            //photonView.RPC("CalibrateHMD", RpcTarget.Others, headCube.transform.position, headCube.transform.rotation);
+            //CalibrateHMD(headCube.transform.position);
         //}
     }
 
@@ -110,17 +111,22 @@ public class FootSync : MonoBehaviourPun
         transform.parent.position += headOffset;
     }
 
-    private void FixedUpdate()
-    {
-        if (!PhotonNetwork.IsMasterClient && headCube != null)
-        {
-            //send every 1sec
-            if (Time.time - lastSentTime > sendEverySeconds)
-            {
-                Debug.Log("Sent just now!");
-                photonView.RPC("CalibrateHMD", RpcTarget.Others, headCube.transform.position);
-                lastSentTime = Time.time;
-            }
-        }
-    }
+    //private void FixedUpdate()
+    //{
+    //    return;
+    //    if (!PhotonNetwork.IsMasterClient && headCube != null)
+    //    {
+    //        //send every 1sec
+    //        if (Time.time - lastSentTime > sendEverySeconds)
+    //        {
+    //            Debug.Log("Sent just now!");
+    //            photonView.RPC("CalibrateHMD", RpcTarget.Others, headCube.transform.position, headCube.transform.eulerAngles.y);
+    //            lastSentTime = Time.time;
+    //        }
+    //    }
+    //}
+    //private void CalibrateLocally()
+    //{
+        //transform.position = 
+    //}
 }
