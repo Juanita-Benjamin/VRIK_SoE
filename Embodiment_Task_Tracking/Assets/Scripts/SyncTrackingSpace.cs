@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using OVR.Input;
 
 public class SyncTrackingSpace : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class SyncTrackingSpace : MonoBehaviour
     {
         // Get space button press
 
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Space) || OVRInput.Get(OVRInput.Button.One))
         {
             SyncSpace();
         }
