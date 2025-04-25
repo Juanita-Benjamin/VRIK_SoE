@@ -91,7 +91,7 @@ public class TrackedBody : MonoBehaviour
         }
 
     }
-    //MAY NOT NEED
+    
     public void StopLoggingOff()
     {
         //turn the logging off

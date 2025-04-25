@@ -53,7 +53,7 @@ public class SnapPiece : MonoBehaviour
             if (resetScript != null)
             {
                 resetScript.IncrementCounter();
-                
+
             }
         }
     }

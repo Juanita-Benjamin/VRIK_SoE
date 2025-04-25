@@ -8,6 +8,7 @@ using Oculus.Movement.BodyTrackingForFitness;
 public class ElementReset : MonoBehaviour
 {
     [SerializeField] private SnapPiece[] snapObjects;
+    private TrackedBody bodyTracking;
     [SerializeField] private List<GameObject> elements;
     [SerializeField] private List<Vector3> elementPositions;
     [SerializeField] private List<GameObject> floorElements;
@@ -56,7 +57,7 @@ public class ElementReset : MonoBehaviour
             //set the break screen active and call reset
             breakScreen.SetActive(true);
             current = 0; //set current to 0 again
-           
+            bodyTracking.StopLoggingOff();
         }
     }
 
