@@ -14,6 +14,7 @@ public class SnapPiece : MonoBehaviour
     private bool isSnapped = false;
 
     // Start is called before the first frame update
+    private Dictionary<GameObject, string> originalTags = new Dictionary<GameObject, string>();
     private void Start()
     {
         collider = GetComponent<Collider>();
@@ -44,7 +45,7 @@ public class SnapPiece : MonoBehaviour
             body.useGravity = false;
             body.isKinematic = true;
 
-
+            //DONT RESET The Tag or else it won't work
             other.gameObject.tag = "Untagged";
             counter++;
 
@@ -57,11 +58,41 @@ public class SnapPiece : MonoBehaviour
         }
     }
 
+    //Not used
     private void InitAudio(Collider other)
     {
         source = other.gameObject.AddComponent<AudioSource>();
         source.clip = Resources.Load("Sounds/Pop") as AudioClip;
         source.pitch = 0.9f;
         source.spatialBlend = 1f;
+    }
+
+    public void StoreTag(GameObject obj)
+    {
+        if (!originalTags.ContainsKey(obj))
+        {
+            originalTags[obj] = obj.tag;
+        }
+    }
+
+    public void ResetTag(GameObject obj)
+    {
+        if (originalTags.TryGetValue(obj, out string originalTag))
+        {
+            obj.tag = originalTag; 
+        }
+    }
+
+    //This is not needed or used
+    public void ResetAllTags()
+    {
+        foreach (var kvp in originalTags)
+        {
+            if (kvp.Key != null)
+            {
+                kvp.Key.tag = kvp.Value;
+            }
+        }
+        originalTags.Clear();
     }
 }

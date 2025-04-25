@@ -138,7 +138,7 @@ public class ConditionFlow : MonoBehaviour
         trialCount = 0;
     }
 
-    void updateCondition()
+    public void updateCondition()
     {
         
 

@@ -13,8 +13,10 @@ public class ElementReset : MonoBehaviour
     [SerializeField] private List<GameObject> floorElements;
     [SerializeField] private List<Vector3> floorElementPositions;
     public GameObject breakScreen;
+    //public GameObject cynlider;
 
     public TextMeshProUGUI totalText, currentText;
+    SnapPiece tagPieces = new SnapPiece();
 
     //[SerializeField] private
     public int total = 0;
@@ -35,7 +37,11 @@ public class ElementReset : MonoBehaviour
         {
             elementPositions[i] = elements[i].transform.position;
             floorElementPositions[i] = floorElements[i].transform.position;
+            tagPieces.StoreTag(elements[i].gameObject);
+            tagPieces.StoreTag(floorElements[i].gameObject);
         }
+
+        //tagPieces.StoreTag(cynlider);
     }
 
     // Update is called once per frame
@@ -62,8 +68,11 @@ public class ElementReset : MonoBehaviour
             elements[i].transform.position = elementPositions[i];
 
             floorElements[i].transform.position = floorElementPositions[i];
-        }
 
+            tagPieces.ResetTag(elements[i].gameObject);
+            tagPieces.ResetTag(floorElements[i].gameObject);
+        }
+     
         current = 0;
         breakScreen.SetActive(false);
     }
@@ -84,4 +93,6 @@ public class ElementReset : MonoBehaviour
     {
         current++;
     }
+
+
 }
