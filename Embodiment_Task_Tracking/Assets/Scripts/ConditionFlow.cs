@@ -23,8 +23,12 @@ public class ConditionFlow : MonoBehaviour
     //get a list of the avatars
     public List<GameObject> avatars;
 
-    //list of elements
-    public GameObject tableTask, floorTask, lowerBody;
+    //Tasks
+    public GameObject tableTask, floorTask;
+
+    //Body parts
+    public GameObject lowerBody; 
+        //hands;
 
     //Pause and end scree
     public GameObject pauseScreen, endScreen;
@@ -38,7 +42,7 @@ public class ConditionFlow : MonoBehaviour
     public TMP_InputField PID;
 
     public TMP_Dropdown cohort_dropdown, gender_dropdown, race_dropdown;
-    public bool isHandstracking, isFullbody, isFloorTask, isTableTask;
+    public bool isHandstracking, isController, isFullbody, isFloorTask, isTableTask;
     public bool pause;
 
     private string log_path = "Participant_Log_Data.csv";
@@ -47,7 +51,8 @@ public class ConditionFlow : MonoBehaviour
     [SerializeField] private int cohortCount = 0; //cohort count: 8
     [SerializeField] private int trialCount = 0; //trial within the cohort: 8
 
-    [SerializeField]private string[,] conditions = new string[8, 8]
+    [SerializeField]
+    private string[,] conditions = new string[8, 8]
     {
         {"HT + FullBody + Table Task", "HT + FullBody + Floor Task", "HT + Torso + Table Task", "Controller + FullBody + Floor Task",  "HT + Torso +  Floor Task", "Controller + FullBody + Table Task","Controller + Torso + Floor Task", "Controller + Torso + Table Task"},
         {"HT + FullBody + Floor Task", "Controller + FullBody + Floor Task",  "HT + FullBody + Table Task",  "Controller + FullBody + Table Task",  "HT + Torso + Table Task"," Controller + Torso + Table Task", "HT + Torso +  Floor Task", "Controller + Torso + Floor Task"},
@@ -58,6 +63,20 @@ public class ConditionFlow : MonoBehaviour
         {"HT + Torso +  Floor Task", " HT + Torso + Table Task", "Controller + Torso + Floor Task"," HT + FullBody + Table Task",  "Controller + Torso + Table Task", "HT + FullBody + Floor Task", " Controller + FullBody + Table Task",  "Controller + FullBody + Floor Task"},
         {"HT + Torso + Table Task", "HT + FullBody + Table Task",  "HT + Torso +  Floor Task", "HT + FullBody + Floor Task",  "Controller + Torso + Floor Task", "Controller + FullBody + Floor Task",  "Controller + Torso + Table Task", "Controller + FullBody + Table Task"}
     };
+
+
+    //[SerializeField]
+    //private string[,] conditions = new string[8, 8]
+    //{
+    //    {"HT + Legs+ Table Task", "HT + Legs+ Floor Task", "Controller + Legs+ Floor Task", "Controller + No Legs + Table Task","HT + No Legs + Table Task", "HT + No Legs+ Floor Task", "Controller + No Legs + Floor Task", "Controller + Legs+ Table Task"},
+    //    {"HT + Legs+ Floor Task", "Controller + No Legs + Table Task", "HT + Legs+ Table Task", "HT + No Legs+ Floor Task", "Controller + Legs+ Floor Task", "Controller + Legs+ Table Task", "HT + No Legs + Table Task", "Controller + No Legs + Floor Task"},
+    //    {"Controller + No Legs + Table Task", "HT + No Legs+ Floor Task", "HT + Legs+ Floor Task", "Controller + Legs+ Table Task", "HT + Legs+ Table Task", "Controller + No Legs + Floor Task" , "Controller + Legs+ Floor Task", "HT + No Legs + Table Task"},
+    //    {"HT + No Legs+ Floor Task" , "Controller + Legs+ Table Task" , "Controller + No Legs + Table Task", "Controller + No Legs + Floor Task" , "HT + Legs+ Floor Task" ,"HT + No Legs + Table Task" ,"HT + Legs+ Table Task", "Controller + Legs+ Floor Task"},
+    //    {"Controller + Legs+ Table Task" ,"Controller + No Legs + Floor Task", "HT + No Legs+ Floor Task", "HT + No Legs + Table Task", "Controller + No Legs + Table Task", "Controller + Legs+ Floor Task" ,"HT + Legs+ Floor Task", "HT + Legs+ Table Task"},
+    //    {"Controller + No Legs + Floor Task", "HT + No Legs + Table Task" , "Controller + Legs+ Table Task" , "Controller + Legs+ Floor Task" , "HT + No Legs+ Floor Task" , "HT + Legs+ Table Task" , "Controller + No Legs + Table Task", "HT + Legs+ Floor Task"},
+    //    {"HT + No Legs + Table Task", "Controller + Legs+ Floor Task", "Controller + No Legs + Floor Task" ,"HT + Legs+ Table Task" , "Controller + Legs+ Table Task" ,"HT + Legs+ Floor Task" , "HT + No Legs+ Floor Task" , "Controller + No Legs + Table Task"},
+    //    {"Controller + Legs+ Floor Task", "HT + Legs+ Table Task", "HT + No Legs + Table Task", "HT + Legs+ Floor Task" ,"Controller + No Legs + Floor Task", "Controller + No Legs + Table Task", "Controller + Legs+ Table Task" ,"HT + No Legs+ Floor Task"}
+    //};
 
     // Start is called before the first frame update
     private void Start()
@@ -107,7 +126,10 @@ public class ConditionFlow : MonoBehaviour
             if (avatar.activeSelf)
             {
                 Debug.Log(avatar.name);
-                lowerBody = GameObject.Find($"{avatar.name}/Lower Body"); 
+
+                //added to locate the hands and feet
+                lowerBody = GameObject.Find($"{avatar.name}/Lower Body");
+                //hands = GameObject.Find($"{avatar.name}/Hands");
             }
         }
     }
@@ -154,11 +176,33 @@ public class ConditionFlow : MonoBehaviour
         tableTask.SetActive(false);
         floorTask.SetActive(false);
 
-
+        //Hand Trackig vs Controller--------------------------------------------
         if (currentCondition.Contains("HT"))
         {
             isHandstracking = true;
+            //hands.gameObject.SetActive(true);
         }
+        else
+        {
+            //hands.gameObject.SetActive(false);
+        }
+
+        //if (currentCondition.Contains("Controller"))
+        //{
+        //    isController = true;
+        //    //should I set the contollers to be active?
+        //    //Or just let them pick it up?
+        //}
+        //------------------------------------------------------------------------
+
+        //previously Contains("FullBody")
+        //if (currentCondition.Contains("Legs"))
+        //{
+        //    isFullbody = true;
+        //    lowerBody.gameObject.SetActive(true);
+        //    hands.gameObject.SetActive(true);
+        //}
+
         if (currentCondition.Contains("FullBody"))
         {
             isFullbody = true;
@@ -168,6 +212,7 @@ public class ConditionFlow : MonoBehaviour
         {
             lowerBody.gameObject.SetActive(false);
         }
+
 
         if (currentCondition.Contains("Table Task"))
         {

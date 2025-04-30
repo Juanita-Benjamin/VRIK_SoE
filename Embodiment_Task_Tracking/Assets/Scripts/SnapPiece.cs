@@ -10,8 +10,7 @@ public class SnapPiece : MonoBehaviour
     public string tag;
     private Collider collider;
     private AudioSource source;
-    public int counter = 0;
-    private bool isSnapped = false;
+    public int counter = 0; 
 
     // Start is called before the first frame update
     private Dictionary<GameObject, string> originalTags = new Dictionary<GameObject, string>();
