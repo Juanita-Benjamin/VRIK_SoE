@@ -27,8 +27,8 @@ public class ConditionFlow : MonoBehaviour
     public GameObject tableTask, floorTask;
 
     //Body parts
-    public GameObject lowerBody; 
-        //hands;
+    public GameObject lowerBody, lefthand, righthand; 
+    //hands;
 
     //Pause and end scree
     public GameObject pauseScreen, endScreen;
@@ -52,31 +52,31 @@ public class ConditionFlow : MonoBehaviour
     [SerializeField] private int trialCount = 0; //trial within the cohort: 8
 
     [SerializeField]
-    private string[,] conditions = new string[8, 8]
-    {
-        {"HT + FullBody + Table Task", "HT + FullBody + Floor Task", "HT + Torso + Table Task", "Controller + FullBody + Floor Task",  "HT + Torso +  Floor Task", "Controller + FullBody + Table Task","Controller + Torso + Floor Task", "Controller + Torso + Table Task"},
-        {"HT + FullBody + Floor Task", "Controller + FullBody + Floor Task",  "HT + FullBody + Table Task",  "Controller + FullBody + Table Task",  "HT + Torso + Table Task"," Controller + Torso + Table Task", "HT + Torso +  Floor Task", "Controller + Torso + Floor Task"},
-        {"Controller + FullBody + Floor Task", "Controller + FullBody + Table Task","HT + FullBody + Floor Task","Controller + Torso + Table Task", "HT + FullBody + Table Task", "Controller + Torso + Floor Task","HT + Torso + Table Task","HT + Torso +  Floor Task"},
-        {"Controller + FullBody + Table Task","Controller + Torso + Table Task", "Controller + FullBody + Floor Task",  "Controller + Torso + Floor Task", "HT + FullBody + Floor Task",  "HT + Torso +  Floor Task", "HT + FullBody + Table Task", "HT + Torso + Table Task" },
-        {"Controller + Torso + Table Task",  "Controller + Torso + Floor Task", "Controller + FullBody + Table Task",  "HT + Torso +  Floor Task", "Controller + FullBody + Floor Task",  "HT + Torso + Table Task", "HT + FullBody + Floor Task", " HT + FullBody + Table Task"},
-        {"Controller + Torso + Floor Task", "HT + Torso +  Floor Task",    "Controller + Torso + Table Task", "HT + Torso + Table Task"," Controller + FullBody + Table Task",  "HT + FullBody + Table Task", " Controller + FullBody + Floor Task",  "HT + FullBody + Floor Task"},
-        {"HT + Torso +  Floor Task", " HT + Torso + Table Task", "Controller + Torso + Floor Task"," HT + FullBody + Table Task",  "Controller + Torso + Table Task", "HT + FullBody + Floor Task", " Controller + FullBody + Table Task",  "Controller + FullBody + Floor Task"},
-        {"HT + Torso + Table Task", "HT + FullBody + Table Task",  "HT + Torso +  Floor Task", "HT + FullBody + Floor Task",  "Controller + Torso + Floor Task", "Controller + FullBody + Floor Task",  "Controller + Torso + Table Task", "Controller + FullBody + Table Task"}
-    };
+    //private string[,] conditions = new string[8, 8]
+    //{
+    //    {"HT + FullBody + Table Task", "HT + FullBody + Floor Task", "HT + Torso + Table Task", "Controller + FullBody + Floor Task",  "HT + Torso +  Floor Task", "Controller + FullBody + Table Task","Controller + Torso + Floor Task", "Controller + Torso + Table Task"},
+    //    {"HT + FullBody + Floor Task", "Controller + FullBody + Floor Task",  "HT + FullBody + Table Task",  "Controller + FullBody + Table Task",  "HT + Torso + Table Task"," Controller + Torso + Table Task", "HT + Torso +  Floor Task", "Controller + Torso + Floor Task"},
+    //    {"Controller + FullBody + Floor Task", "Controller + FullBody + Table Task","HT + FullBody + Floor Task","Controller + Torso + Table Task", "HT + FullBody + Table Task", "Controller + Torso + Floor Task","HT + Torso + Table Task","HT + Torso +  Floor Task"},
+    //    {"Controller + FullBody + Table Task","Controller + Torso + Table Task", "Controller + FullBody + Floor Task",  "Controller + Torso + Floor Task", "HT + FullBody + Floor Task",  "HT + Torso +  Floor Task", "HT + FullBody + Table Task", "HT + Torso + Table Task" },
+    //    {"Controller + Torso + Table Task",  "Controller + Torso + Floor Task", "Controller + FullBody + Table Task",  "HT + Torso +  Floor Task", "Controller + FullBody + Floor Task",  "HT + Torso + Table Task", "HT + FullBody + Floor Task", " HT + FullBody + Table Task"},
+    //    {"Controller + Torso + Floor Task", "HT + Torso +  Floor Task",    "Controller + Torso + Table Task", "HT + Torso + Table Task"," Controller + FullBody + Table Task",  "HT + FullBody + Table Task", " Controller + FullBody + Floor Task",  "HT + FullBody + Floor Task"},
+    //    {"HT + Torso +  Floor Task", " HT + Torso + Table Task", "Controller + Torso + Floor Task"," HT + FullBody + Table Task",  "Controller + Torso + Table Task", "HT + FullBody + Floor Task", " Controller + FullBody + Table Task",  "Controller + FullBody + Floor Task"},
+    //    {"HT + Torso + Table Task", "HT + FullBody + Table Task",  "HT + Torso +  Floor Task", "HT + FullBody + Floor Task",  "Controller + Torso + Floor Task", "Controller + FullBody + Floor Task",  "Controller + Torso + Table Task", "Controller + FullBody + Table Task"}
+    //};
 
 
     //[SerializeField]
-    //private string[,] conditions = new string[8, 8]
-    //{
-    //    {"HT + Legs+ Table Task", "HT + Legs+ Floor Task", "Controller + Legs+ Floor Task", "Controller + No Legs + Table Task","HT + No Legs + Table Task", "HT + No Legs+ Floor Task", "Controller + No Legs + Floor Task", "Controller + Legs+ Table Task"},
-    //    {"HT + Legs+ Floor Task", "Controller + No Legs + Table Task", "HT + Legs+ Table Task", "HT + No Legs+ Floor Task", "Controller + Legs+ Floor Task", "Controller + Legs+ Table Task", "HT + No Legs + Table Task", "Controller + No Legs + Floor Task"},
-    //    {"Controller + No Legs + Table Task", "HT + No Legs+ Floor Task", "HT + Legs+ Floor Task", "Controller + Legs+ Table Task", "HT + Legs+ Table Task", "Controller + No Legs + Floor Task" , "Controller + Legs+ Floor Task", "HT + No Legs + Table Task"},
-    //    {"HT + No Legs+ Floor Task" , "Controller + Legs+ Table Task" , "Controller + No Legs + Table Task", "Controller + No Legs + Floor Task" , "HT + Legs+ Floor Task" ,"HT + No Legs + Table Task" ,"HT + Legs+ Table Task", "Controller + Legs+ Floor Task"},
-    //    {"Controller + Legs+ Table Task" ,"Controller + No Legs + Floor Task", "HT + No Legs+ Floor Task", "HT + No Legs + Table Task", "Controller + No Legs + Table Task", "Controller + Legs+ Floor Task" ,"HT + Legs+ Floor Task", "HT + Legs+ Table Task"},
-    //    {"Controller + No Legs + Floor Task", "HT + No Legs + Table Task" , "Controller + Legs+ Table Task" , "Controller + Legs+ Floor Task" , "HT + No Legs+ Floor Task" , "HT + Legs+ Table Task" , "Controller + No Legs + Table Task", "HT + Legs+ Floor Task"},
-    //    {"HT + No Legs + Table Task", "Controller + Legs+ Floor Task", "Controller + No Legs + Floor Task" ,"HT + Legs+ Table Task" , "Controller + Legs+ Table Task" ,"HT + Legs+ Floor Task" , "HT + No Legs+ Floor Task" , "Controller + No Legs + Table Task"},
-    //    {"Controller + Legs+ Floor Task", "HT + Legs+ Table Task", "HT + No Legs + Table Task", "HT + Legs+ Floor Task" ,"Controller + No Legs + Floor Task", "Controller + No Legs + Table Task", "Controller + Legs+ Table Task" ,"HT + No Legs+ Floor Task"}
-    //};
+    private string[,] conditions = new string[8, 8]
+    {
+        {"HT + Legs + Table Task", "HT + Legs + Floor Task", "Controller + Legs + Floor Task", "Controller + No Legs + Table Task","HT + No Legs + Table Task", "HT + No Legs + Floor Task", "Controller + No Legs + Floor Task", "Controller + Legs+ Table Task"},
+        {"HT + Legs + Floor Task", "Controller + No Legs + Table Task", "HT + Legs + Table Task", "HT + No Legs + Floor Task", "Controller + Legs+ Floor Task", "Controller + Legs+ Table Task", "HT + No Legs + Table Task", "Controller + No Legs + Floor Task"},
+        {"Controller + No Legs + Table Task", "HT + No Legs + Floor Task", "HT + Legs + Floor Task", "Controller + Legs + Table Task", "HT + Legs + Table Task", "Controller + No Legs + Floor Task" , "Controller + Legs + Floor Task", "HT + No Legs + Table Task"},
+        {"HT + No Legs + Floor Task" , "Controller + Legs + Table Task" , "Controller + No Legs + Table Task", "Controller + No Legs + Floor Task" , "HT + Legs + Floor Task" ,"HT + No Legs + Table Task" ,"HT + Legs + Table Task", "Controller + Legs + Floor Task"},
+        {"Controller + Legs+ Table Task" ,"Controller + No Legs + Floor Task", "HT + No Legs + Floor Task", "HT + No Legs + Table Task", "Controller + No Legs + Table Task", "Controller + Legs+ Floor Task" ,"HT + Legs + Floor Task", "HT + Legs + Table Task"},
+        {"Controller + No Legs + Floor Task", "HT + No Legs + Table Task" , "Controller + Legs + Table Task" , "Controller + Legs + Floor Task" , "HT + No Legs + Floor Task" , "HT + Legs + Table Task" , "Controller + No Legs + Table Task", "HT + Legs + Floor Task"},
+        {"HT + No Legs + Table Task", "Controller + Legs + Floor Task", "Controller + No Legs + Floor Task" ,"HT + Legs + Table Task" , "Controller + Legs + Table Task" ,"HT + Legs + Floor Task" , "HT + No Legs + Floor Task" , "Controller + No Legs + Table Task"},
+        {"Controller + Legs + Floor Task", "HT + Legs + Table Task", "HT + No Legs + Table Task", "HT + Legs+ Floor Task" ,"Controller + No Legs + Floor Task", "Controller + No Legs + Table Task", "Controller + Legs + Table Task" ,"HT + No Legs + Floor Task"}
+    };
 
     // Start is called before the first frame update
     private void Start()
@@ -129,7 +129,8 @@ public class ConditionFlow : MonoBehaviour
 
                 //added to locate the hands and feet
                 lowerBody = GameObject.Find($"{avatar.name}/Lower Body");
-                //hands = GameObject.Find($"{avatar.name}/Hands");
+                lefthand = GameObject.Find($"{avatar.name}/Left Hand");
+                righthand = GameObject.Find($"{avatar.name}/Right Hand");
             }
         }
     }
@@ -180,37 +181,34 @@ public class ConditionFlow : MonoBehaviour
         if (currentCondition.Contains("HT"))
         {
             isHandstracking = true;
-            //hands.gameObject.SetActive(true);
+            lefthand.gameObject.SetActive(true);
+            righthand.gameObject.SetActive(true);
+
         }
         else
         {
-            //hands.gameObject.SetActive(false);
+            righthand.gameObject.SetActive(false);
+            lefthand.gameObject.SetActive(false);
+
         }
 
-        //if (currentCondition.Contains("Controller"))
-        //{
-        //    isController = true;
-        //    //should I set the contollers to be active?
-        //    //Or just let them pick it up?
-        //}
+        if (currentCondition.Contains("Controller"))
+        {
+            isController = true;
+            //should I set the contollers to be active?
+            //Or just let them pick it up?
+        }
         //------------------------------------------------------------------------
 
-        //previously Contains("FullBody")
-        //if (currentCondition.Contains("Legs"))
-        //{
-        //    isFullbody = true;
-        //    lowerBody.gameObject.SetActive(true);
-        //    hands.gameObject.SetActive(true);
-        //}
-
-        if (currentCondition.Contains("FullBody"))
+        if (currentCondition.Contains("No Legs"))
         {
-            isFullbody = true;
-            lowerBody.gameObject.SetActive(true);
+            isFullbody = false;
+            lowerBody.gameObject.SetActive(false);
         }
+
         else
         {
-            lowerBody.gameObject.SetActive(false);
+            lowerBody.gameObject.SetActive(true);
         }
 
 
