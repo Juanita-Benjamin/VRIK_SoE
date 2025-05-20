@@ -27,8 +27,10 @@ public class ConditionFlow : MonoBehaviour
     public GameObject tableTask, floorTask;
 
     //Body parts
-    public GameObject lowerBody, lefthand, righthand; 
+    public GameObject lowerBody, hand;
     //hands;
+    [SerializeField]
+    private GameObject avatarSelect;
 
     //Pause and end scree
     public GameObject pauseScreen, endScreen;
@@ -51,7 +53,6 @@ public class ConditionFlow : MonoBehaviour
     [SerializeField] private int cohortCount = 0; //cohort count: 8
     [SerializeField] private int trialCount = 0; //trial within the cohort: 8
 
-    [SerializeField]
     //private string[,] conditions = new string[8, 8]
     //{
     //    {"HT + FullBody + Table Task", "HT + FullBody + Floor Task", "HT + Torso + Table Task", "Controller + FullBody + Floor Task",  "HT + Torso +  Floor Task", "Controller + FullBody + Table Task","Controller + Torso + Floor Task", "Controller + Torso + Table Task"},
@@ -108,31 +109,47 @@ public class ConditionFlow : MonoBehaviour
 
         string selectedRace = race_dropdown.options[race_dropdown.value].text;
         string selectedGender = gender_dropdown.options[gender_dropdown.value].text;
-
         string key = $"{selectedRace}_{selectedGender}";
 
         if (avatarPrefabs.ContainsKey(key))
         {
             Debug.Log("Key found");
-            avatarPrefabs[key].SetActive(true);
+            avatarSelect = avatarPrefabs[key];
+            avatarSelect.SetActive(true);
+
+
+            foreach (var avatar in avatars)
+            {
+                if (avatar.activeSelf)
+                {
+                    //added to locate the hands and feet
+                    lowerBody = GameObject.Find(avatar.name + "/Lower Body");
+                    hand = GameObject.Find(avatar.name + "/Hands");
+                }
+            }
+
+            Transform userHead = GameObject.Find("OVRCameraRig")?.transform.Find("TrackingSpace/CenterEyeAnchor");
+
+            AvatarAligner aligner = avatarSelect.GetComponent<AvatarAligner>();
+            if (aligner == null)
+                aligner = avatarSelect.AddComponent<AvatarAligner>();
+
+            aligner.headBone = avatarSelect.transform.Find("Rig/Deformation/HeadTarget");
+            aligner.footBone = avatarSelect.transform.Find("Rig/Deformation/RightToesTarget");
+            aligner.userHead = userHead;
+
+            StartCoroutine(DelayedAlign(aligner));
         }
         else
         {
             Debug.Log("Key not found");
         }
+    }
 
-        foreach (var avatar in avatars)
-        {
-            if (avatar.activeSelf)
-            {
-                Debug.Log(avatar.name);
-
-                //added to locate the hands and feet
-                lowerBody = GameObject.Find($"{avatar.name}/Lower Body");
-                lefthand = GameObject.Find($"{avatar.name}/Left Hand");
-                righthand = GameObject.Find($"{avatar.name}/Right Hand");
-            }
-        }
+    private IEnumerator DelayedAlign(AvatarAligner aligner)
+    {
+        yield return null;
+        aligner.AlignAvatarScaleToUser();
     }
     public void NextTrial()
     {
@@ -181,23 +198,23 @@ public class ConditionFlow : MonoBehaviour
         if (currentCondition.Contains("HT"))
         {
             isHandstracking = true;
-            lefthand.gameObject.SetActive(true);
-            righthand.gameObject.SetActive(true);
+            hand.gameObject.SetActive(true);
+            
 
         }
         else
         {
-            righthand.gameObject.SetActive(false);
-            lefthand.gameObject.SetActive(false);
-
-        }
-
-        if (currentCondition.Contains("Controller"))
-        {
+            hand.gameObject.SetActive(false);
             isController = true;
-            //should I set the contollers to be active?
-            //Or just let them pick it up?
         }
+
+        ////I don't think I need this
+        //if (currentCondition.Contains("Controller"))
+        //{
+           
+        //    //should I set the contollers to be active?
+        //    //Or just let them pick it up?
+        //}
         //------------------------------------------------------------------------
 
         if (currentCondition.Contains("No Legs"))

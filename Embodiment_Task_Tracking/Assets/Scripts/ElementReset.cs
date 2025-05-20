@@ -25,7 +25,7 @@ public class ElementReset : MonoBehaviour
     public int current = 0;
 
     private SnapPiece snapNumber;
-    [SerializeField] private bool onFlag = false;
+    //[SerializeField] private bool onFlag = false;
 
     // Start is called before the first frame update
     private void Start()
