@@ -27,10 +27,10 @@ public class AvatarAligner : MonoBehaviour
         float floorY = GetFloorY();
         Debug.Log($"[AvatarAligner] Detected floorY: {floorY:F3}");
         // Calculate user and avatar height
-        float simulatedUserHeight = 1.0f; // Uncomment this line for testing purposes.
-        float userHeight = simulatedUserHeight;// Uncomment this line for testing purposes.
+        //float simulatedUserHeight = 1.0f; // Uncomment this line for testing purposes.
+        //float userHeight = simulatedUserHeight;// Uncomment this line for testing purposes.
 
-        //float userHeight = userHead.position.y - floorY;  // comment this line when testing
+        float userHeight = userHead.position.y - floorY;  // comment this line when testing
         float avatarHeight = headBone.position.y - footBone.position.y;
         Debug.Log($"[AvatarAligner] Computed UserHeight: {userHeight:F3}, AvatarHeight: {avatarHeight:F3}");
 
