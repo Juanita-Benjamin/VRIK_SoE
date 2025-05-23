@@ -42,11 +42,10 @@ public class TrackedBody : MonoBehaviour
             //get current cohoort
             var cohort = ConditionFlow.currentCohort;
             PID = ParticipantID.GetComponent<TMP_InputField>().text;
-            log_path = $"Tracking/{"Cohort "}+{cohort}/{PID}_{DateTime.Now.ToString("MMddyy-HHmm")}.csv";
-            if (!Directory.Exists(log_path))
+            log_path = $"Tracking/{"Cohort "}+{cohort}/{PID}_{DateTime.Now.ToFileTimeUtc()}.csv";
+            if (!Directory.Exists($"Tracking/{"Cohort "}+{cohort}"))
             {
-                //may need to do: Directory.CreateDirectory($"Tracking/{Cohort }+{cohort}");
-                Directory.CreateDirectory(log_path);
+                Directory.CreateDirectory($"Tracking/{"Cohort "}+{cohort}");
             }
 
             string headers = "Timestamp, TimeElapsed,"; //placeholder for now
