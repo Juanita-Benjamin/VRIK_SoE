@@ -53,17 +53,10 @@ public class ConditionFlow : MonoBehaviour
     [SerializeField] private int cohortCount = 0; //cohort count: 8
     [SerializeField] private int trialCount = 0; //trial within the cohort: 8
 
-    //private string[,] conditions = new string[8, 8]
-    //{
-    //    {"HT + FullBody + Table Task", "HT + FullBody + Floor Task", "HT + Torso + Table Task", "Controller + FullBody + Floor Task",  "HT + Torso +  Floor Task", "Controller + FullBody + Table Task","Controller + Torso + Floor Task", "Controller + Torso + Table Task"},
-    //    {"HT + FullBody + Floor Task", "Controller + FullBody + Floor Task",  "HT + FullBody + Table Task",  "Controller + FullBody + Table Task",  "HT + Torso + Table Task"," Controller + Torso + Table Task", "HT + Torso +  Floor Task", "Controller + Torso + Floor Task"},
-    //    {"Controller + FullBody + Floor Task", "Controller + FullBody + Table Task","HT + FullBody + Floor Task","Controller + Torso + Table Task", "HT + FullBody + Table Task", "Controller + Torso + Floor Task","HT + Torso + Table Task","HT + Torso +  Floor Task"},
-    //    {"Controller + FullBody + Table Task","Controller + Torso + Table Task", "Controller + FullBody + Floor Task",  "Controller + Torso + Floor Task", "HT + FullBody + Floor Task",  "HT + Torso +  Floor Task", "HT + FullBody + Table Task", "HT + Torso + Table Task" },
-    //    {"Controller + Torso + Table Task",  "Controller + Torso + Floor Task", "Controller + FullBody + Table Task",  "HT + Torso +  Floor Task", "Controller + FullBody + Floor Task",  "HT + Torso + Table Task", "HT + FullBody + Floor Task", " HT + FullBody + Table Task"},
-    //    {"Controller + Torso + Floor Task", "HT + Torso +  Floor Task",    "Controller + Torso + Table Task", "HT + Torso + Table Task"," Controller + FullBody + Table Task",  "HT + FullBody + Table Task", " Controller + FullBody + Floor Task",  "HT + FullBody + Floor Task"},
-    //    {"HT + Torso +  Floor Task", " HT + Torso + Table Task", "Controller + Torso + Floor Task"," HT + FullBody + Table Task",  "Controller + Torso + Table Task", "HT + FullBody + Floor Task", " Controller + FullBody + Table Task",  "Controller + FullBody + Floor Task"},
-    //    {"HT + Torso + Table Task", "HT + FullBody + Table Task",  "HT + Torso +  Floor Task", "HT + FullBody + Floor Task",  "Controller + Torso + Floor Task", "Controller + FullBody + Floor Task",  "Controller + Torso + Table Task", "Controller + FullBody + Table Task"}
-    //};
+    //DEBUG LIST
+    public List <GameObject> demoAvatars, bodyParts;
+    public Toggle[] toggles, headToggle;
+
 
 
     //[SerializeField]
@@ -101,7 +94,15 @@ public class ConditionFlow : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-       
+        for (int i = 0; i < toggles.Length; i++)
+        {
+            demoAvatars[i].gameObject.SetActive(toggles[i].isOn);
+        }
+
+        for (int i = 0; i < headToggle.Length; i++)
+        {
+            bodyParts[i].gameObject.SetActive(headToggle[i].isOn);
+        }
     }
 
     public void InstantiateAvatar()
@@ -116,6 +117,7 @@ public class ConditionFlow : MonoBehaviour
             Debug.Log("Key found");
             avatarSelect = avatarPrefabs[key];
             avatarSelect.SetActive(true);
+            demoAvatars.Add(avatarSelect);
 
 
             foreach (var avatar in avatars)
@@ -127,6 +129,8 @@ public class ConditionFlow : MonoBehaviour
                     hand = GameObject.Find(avatar.name + "/Hands");
                 }
             }
+
+            //DISABLED FOR TAKING PICTURES
 
             Transform userHead = GameObject.Find("OVRCameraRig")?.transform.Find("TrackingSpace/CenterEyeAnchor");
 

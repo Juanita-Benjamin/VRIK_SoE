@@ -1,0 +1,15 @@
+ParticipantID, Gender, Race, cohort #, handtracking, fullbody date-time
+10, Female, Black, 1, False,False ,05-26-17-13
+8, Female, Black, 1,False,False,05-26-17-16
+8, Female, Black, 1,False,False,05-26-17-18
+8, Female, Black, 1,True,False,05-26-17-20
+8, Female, Black, 1,False,False,05-26-17-20
+8, Female, Black, 1,False,False,05-26-17-21
+8, Female, Black, 1,True,False,05-26-17-21
+8, Female, Black, 1,True,False,05-26-17-22
+8, Female, Black, 1,False,False,05-26-17-22
+8, Female, Black, 1,False,False,05-26-17-22
+, Female, Black, 1,False,False,06-03-12-33
+, Female, Black, 1,False,False,06-03-12-54
+, Female, Black, 3,False,False,06-03-12-58
+, Male, Asian, 4,False,False,06-03-13-25
