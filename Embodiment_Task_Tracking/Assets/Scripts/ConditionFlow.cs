@@ -8,6 +8,7 @@ using UnityEngine.UI;
 using Unity.VisualScripting;
 using System;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
+using System.Linq;
 
 
 public class ConditionFlow : MonoBehaviour
@@ -118,7 +119,7 @@ public class ConditionFlow : MonoBehaviour
             avatarSelect = avatarPrefabs[key];
             avatarSelect.SetActive(true);
             demoAvatars.Add(avatarSelect);
-
+           
 
             foreach (var avatar in avatars)
             {
@@ -133,6 +134,7 @@ public class ConditionFlow : MonoBehaviour
             //DISABLED FOR TAKING PICTURES
 
             Transform userHead = GameObject.Find("OVRCameraRig")?.transform.Find("TrackingSpace/CenterEyeAnchor");
+
 
             AvatarAligner aligner = avatarSelect.GetComponent<AvatarAligner>();
             if (aligner == null)
