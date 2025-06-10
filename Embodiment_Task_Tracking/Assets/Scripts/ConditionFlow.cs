@@ -32,6 +32,9 @@ public class ConditionFlow : MonoBehaviour
     //hands;
     [SerializeField]
     private GameObject avatarSelect;
+    //demoAvatars
+    [SerializeField]
+    private GameObject demoAv1, demoAv2;
 
     //Pause and end scree
     public GameObject pauseScreen, endScreen;
@@ -118,8 +121,11 @@ public class ConditionFlow : MonoBehaviour
             Debug.Log("Key found");
             avatarSelect = avatarPrefabs[key];
             avatarSelect.SetActive(true);
+
+            //demo
             demoAvatars.Add(avatarSelect);
-           
+            demoAv1 = demoAvatars[0];
+            demoAv2 = demoAvatars[1];
 
             foreach (var avatar in avatars)
             {
@@ -145,6 +151,35 @@ public class ConditionFlow : MonoBehaviour
             aligner.userHead = userHead;
 
             StartCoroutine(DelayedAlign(aligner));
+
+            #region Demo Avatars
+            //DEMO VERSION
+            Transform userHead_1 = GameObject.Find("OVRCameraRig")?.transform.Find("TrackingSpace/CenterEyeAnchor");
+
+            AvatarAligner demo1 = demoAv1.GetComponent<AvatarAligner>();
+            if (demo1 == null)
+                demo1 = demoAv1.AddComponent<AvatarAligner>();
+
+            demo1.headBone = demoAv1.transform.Find("Rig/Deformation/HeadTarget");
+            demo1.footBone = demoAv1.transform.Find("Rig/Deformation/RightToesTarget");
+            demo1.userHead = userHead;
+
+            StartCoroutine(DelayedAlign(demo1));
+
+            //Second demo avatar
+            Transform userHead_2 = GameObject.Find("OVRCameraRig")?.transform.Find("TrackingSpace/CenterEyeAnchor");
+
+            AvatarAligner demo2 = demoAv2.GetComponent<AvatarAligner>();
+            if (demo2 == null)
+                demo2 = demoAv2.AddComponent<AvatarAligner>();
+
+            demo2.headBone = demoAv2.transform.Find("Rig/Deformation/HeadTarget");
+            demo2.footBone = demoAv2.transform.Find("Rig/Deformation/RightToesTarget");
+            demo2.userHead = userHead;
+
+            StartCoroutine(DelayedAlign(demo2));
+            #endregion
+
         }
         else
         {

@@ -40337,6 +40337,8 @@ MonoBehaviour:
   lowerBody: {fileID: 0}
   hand: {fileID: 0}
   avatarSelect: {fileID: 0}
+  demoAv1: {fileID: 399997823508403758}
+  demoAv2: {fileID: 656632414}
   pauseScreen: {fileID: 1220480461}
   endScreen: {fileID: 2016964800}
   reset: {fileID: 1519634644}
