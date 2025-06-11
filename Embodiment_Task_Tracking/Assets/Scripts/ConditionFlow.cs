@@ -58,8 +58,8 @@ public class ConditionFlow : MonoBehaviour
     [SerializeField] private int trialCount = 0; //trial within the cohort: 8
 
     //DEBUG LIST
-    public List <GameObject> demoAvatars, bodyParts;
-    public Toggle[] toggles, headToggle;
+    public List <GameObject> demoAvatars, bodyParts, headPart;
+    public Toggle[] toggles, headToggle, bodyToggle;
 
 
 
@@ -103,9 +103,14 @@ public class ConditionFlow : MonoBehaviour
             demoAvatars[i].gameObject.SetActive(toggles[i].isOn);
         }
 
+        for (int i = 0; i < bodyToggle.Length; i++)
+        {
+            bodyParts[i].gameObject.SetActive(bodyToggle[i].isOn);
+        }
+
         for (int i = 0; i < headToggle.Length; i++)
         {
-            bodyParts[i].gameObject.SetActive(headToggle[i].isOn);
+            headPart[i].gameObject.SetActive(headToggle[i].isOn);
         }
     }
 
@@ -138,7 +143,7 @@ public class ConditionFlow : MonoBehaviour
             }
 
             //DISABLED FOR TAKING PICTURES
-
+            
             Transform userHead = GameObject.Find("OVRCameraRig")?.transform.Find("TrackingSpace/CenterEyeAnchor");
 
 
@@ -178,7 +183,7 @@ public class ConditionFlow : MonoBehaviour
             demo2.userHead = userHead;
 
             StartCoroutine(DelayedAlign(demo2));
-            #endregion
+            #endregion 
 
         }
         else
