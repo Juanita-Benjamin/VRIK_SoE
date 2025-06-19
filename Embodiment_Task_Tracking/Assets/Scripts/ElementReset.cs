@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using Oculus.Movement.BodyTrackingForFitness;
 
 public class ElementReset : MonoBehaviour
 {
