@@ -15,7 +15,9 @@ MonoBehaviour:
   boolProperties:
     keys:
     - OVRProjectSetup.OVRProjectSetup.OVRConfigurationTask.c344325eb1a17b894029bc1ede8076e7.Ignored.Android
-    values: 01
+    - Meta.XR.SDK.66ffe5547d28bc9caf9f46c940a72968.MarkedAsFixed.Standalone
+    - Meta.XR.SDK.c344325eb1a17b894029bc1ede8076e7.Ignored.Standalone
+    values: 010101
   intProperties:
     keys: []
     values: 
